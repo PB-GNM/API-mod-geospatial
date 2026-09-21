@@ -66,17 +66,17 @@ loadRespecWithConfiguration({
       href: "https://docs.ogc.org/is/19-079r2/19-079r2.html",
       title: "OGC API - Features - Part 3: Filtering",
       editors: ["Panagiotis (Peter) A. Vretanos", "Clemens Portele"],
-      status: "Draft",
+      status: "Approved",
       publisher: "Open Geospatial Consortium",
       version: "1.0.0-rc.1"
     },
     "JSON-FG": {
-      href: "https://docs.ogc.org/DRAFTS/21-045.html",
+      href: "https://docs.ogc.org/is/21-045r1/21-045r1.html",
       title: "OGC Features and Geometries JSON - Part 1: Core",
       editors: ["Clemens Portele", "Panagiotis (Peter) A. Vretanos"],
-      status: "Editor's Draft",
+      status: "Approved",
       publisher: "Open Geospatial Consortium",
-      version: "0.1"
+      version: "1.0"
     },
     "HAL": {
       href: "http://stateless.co/hal_specification.html",
