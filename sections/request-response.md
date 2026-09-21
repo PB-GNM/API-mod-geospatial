@@ -34,17 +34,17 @@ JSON-FG offers the following additional capabilities beyond those of GeoJSON:
 
 1) Coordinate reference systems other than WGS 84;
 2) Temporal data via a timestamp or interval; 
-3) 3D capabilities via four new data types:
-	a. Polyhedron (composed of faces; see Figure 2)
-	b. MultiPolyhedron
-	c. Prism (base geometry with 'height from' and 'height to' as additional attributes; similar to 2.5D)
-	d. MultiPrism
-4) Use of arcs via five new data types (see Figure 3):
-	a. CircularString
-	b. CompoundCurve
-	c. CurvePolygon
-	d. MultiCurve
-	e. MultiSurface
+3) 3D capabilities via four new data types: 
+	- Polyhedron (composed of faces; see Figure 2)
+	- MultiPolyhedron
+	- Prism (base geometry with 'height from' and 'height to' as additional attributes; similar to 2.5D)
+	- MultiPrism
+4) Use of arcs via five new data types (see Figure 3): 
+	- CircularString
+	- CompoundCurve
+	- CurvePolygon
+	- MultiCurve
+	- MultiSurface
 5) Linear referencing using measures (e.g., indicating a location along a linear feature like a highway using hectometer markers).
 6) Specification of the feature type and its associated schema. This enables the automatic assignment of a map layer in a viewer based on the feature type. It also allows multiple featuretypes to be included in a single file.
 
