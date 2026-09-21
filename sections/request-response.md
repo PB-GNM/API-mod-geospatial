@@ -14,6 +14,11 @@ The Geospatial Module is focused on JSON-based encoding of data. However, consid
 
 ## Encoding
 
+The requested encoding can be indicated with the parameter ?f=<encoding>.
+For instance for GeoJSON this would be:
+https://api.pdok.nl/kadaster/brt-top10nl/ogc/v1/collections/gebouw_punt/items?f=json
+The corresponding media type would be "application/geo+json".
+
 ### GeoJSON
 
 [[RFC7946]] describes the GeoJSON format, including a convention for describing 2D geometric objects in CRS84 (OGC:CRS84). In the Geospatial module of the API strategy we adopt the GeoJSON conventions for describing geometry objects. The convention is extended to allow alternative projections.

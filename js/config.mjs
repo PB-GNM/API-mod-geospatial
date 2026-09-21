@@ -47,12 +47,12 @@ loadRespecWithConfiguration({
       publisher: "Geonovum",
     },
     "ogcapi-features-1": {
-      href: "http://docs.ogc.org/is/17-069r3/17-069r3.html",
+      href: "http://docs.ogc.org/is/17-069r4/17-069r4.html",
       title: "OGC API - Features - Part 1: Core",
       editors: ["Clemens Portele", "Panagiotis (Peter) A. Vretanos", "Charles Heazel"],
       status: "Approved",
       publisher: "Open Geospatial Consortium",
-      version: "1.0"
+      version: "1.0.1"
     },
     "ogcapi-features-2": {
       href: "https://docs.ogc.org/is/18-058/18-058.html",
