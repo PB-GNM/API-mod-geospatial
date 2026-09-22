@@ -20,31 +20,18 @@ The supported encoding should be indicated in the link section of the the collec
 <p>Below you find an example of such a link section for GeoJSON and JSON-FG:</p>
   <pre class="example">
 {
-2
-"links": [
-3
-{
-4
-"href": ".../items?f=json",
-5
-"rel": "alternate",
-6
-"type": "application/geo+json"
-7
-},
-8
-{
-9
-"href": ".../items?f=jsonfg",
-10
-"rel": "alternate",
-11
-"type": "application/fg+json"
-12
-}
-13
-]
-14
+  "links": [
+    {
+      "href": ".../items?f=json",
+      "rel": "alternate",
+      "type": "application/geo+json"
+    },
+    {
+      "href": ".../items?f=jsonfg",
+      "rel": "alternate",
+      "type": "application/fg+json"
+    }
+  ]
 }
   </pre>
 
@@ -116,7 +103,7 @@ You can embed the Well Known Text format inside a JSON geometry element. This ca
         type: string
         format: wkt
   </pre>
-<p>Sample response of example 1:</p>
+<p>Corresponding sample response:</p>
   <pre class="example">
   {
     "building": {
@@ -136,7 +123,7 @@ You can embed the Well Known Text format inside a JSON geometry element. This ca
         type: string
         format: wkb
   </pre>
-<p>Sample response of example 3:</p>
+<p>Corresponding sample response:</p>
   <pre class="example">
   {
     "building": {
