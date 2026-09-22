@@ -14,10 +14,42 @@ The Geospatial Module is focused on JSON-based encoding of data. However, consid
 
 ## Encoding
 
-The requested encoding can be indicated with the parameter ?f="encoding".
-For instance for GeoJSON this would be:  
-https://api.pdok.nl/kadaster/brt-top10nl/ogc/v1/collections/gebouw_punt/items?f=json  
-The corresponding media type would be "application/geo+json".
+The Core requirements class of the OGC API Features standard includes recommendations to support HTML and GeoJSON as encodings, where practical.
+The supported encoding should be indicated in the link section of the the collection/items and collection/items/{featuresId} endpoint.
+
+<p>Below you find an example of such a link section for GeoJSON and JSON-FG:</p>
+  <pre class="example">
+{
+2
+"links": [
+3
+{
+4
+"href": ".../items?f=json",
+5
+"rel": "alternate",
+6
+"type": "application/geo+json"
+7
+},
+8
+{
+9
+"href": ".../items?f=jsonfg",
+10
+"rel": "alternate",
+11
+"type": "application/fg+json"
+12
+}
+13
+]
+14
+}
+  </pre>
+
+In addition, you must also include the same information in the OpenAPI definition via the content sections of responses.
+The supported encodings should also be mentioned in the corresponding conformance.
 
 ### GeoJSON
 
@@ -52,6 +84,8 @@ JSON-FG offers the following additional capabilities beyond those of GeoJSON:
 	- MultiSurface
 5) Linear referencing using measures (e.g., indicating a location along a linear feature like a highway using hectometer markers).
 6) Specification of the feature type and its associated schema. This enables the automatic assignment of a map layer in a viewer based on the feature type. It also allows multiple featuretypes to be included in a single file.
+
+If one or more of these capabilities are applicable JSON-FG is a recommanded encoding.
 
 ### GML
 
