@@ -55,12 +55,12 @@ loadRespecWithConfiguration({
       version: "1.0.1"
     },
     "ogcapi-features-2": {
-      href: "https://docs.ogc.org/is/18-058/18-058.html",
-      title: "OGC API - Features - Part 2: Coordinate Reference Systems by Reference",
+      href: "https://docs.ogc.org/is/18-058r1/18-058r1.html",
+      title: "OGC API - Features - Part 2: Coordinate Reference Systems by Reference corrigendum",
       editors: ["Clemens Portele", "Panagiotis (Peter) A. Vretanos"],
       status: "Approved",
       publisher: "Open Geospatial Consortium",
-      version: "1.0"
+      version: "1.0.1"
     },
     "ogcapi-features-3": {
       href: "https://docs.ogc.org/is/19-079r2/19-079r2.html",
