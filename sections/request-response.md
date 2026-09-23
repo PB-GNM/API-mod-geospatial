@@ -45,10 +45,10 @@ The GeoJSON conventions and extensions described in this module apply to both ge
 
 GeoJSON does not cover all use cases. For example, it is not possible to store circular arc geometries or solids in GeoJSON. In such cases, there are several valid options:
 
-- Use alternative standardized formats for geospatial data, such as: 
-	- [OGC JSON-FG](https://docs.ogc.org/is/21-045r1/21-045r1.html);
-	- [GML](https://docs.ogc.org/is/07-036r1/07-036r1/pdf);
-	- [WKT](https://www.w3.org/TR/sdw-bp/#dfn-well-known-text-(wkt)) or its binary equivalent WKB;
+- Use alternative standardized formats for geospatial data, such as:  
+   - [OGC JSON-FG](https://docs.ogc.org/is/21-045r1/21-045r1.html)
+   - [GML](https://docs.ogc.org/is/07-036r1/07-036r1/pdf)
+   - [WKT](https://www.w3.org/TR/sdw-bp/#dfn-well-known-text-(wkt)) or its binary equivalent WKB
 - Use a workaround, e.g. convert circular lines / arcs to regular linestrings.
 
 ### JSON-FG
@@ -57,18 +57,18 @@ JSON-FG files are also valid GeoJSON files. Elements have simply been added so t
 JSON-FG offers the following additional capabilities beyond those of GeoJSON:
 
 1) Coordinate reference systems other than WGS 84;
-2) Temporal data via a timestamp or interval; 
-3) 3D capabilities via four new data types: 
-	- Polyhedron (composed of faces; see Figure 2)
-	- MultiPolyhedron
-	- Prism (base geometry with 'height from' and 'height to' as additional attributes; similar to 2.5D)
-	- MultiPrism
-4) Use of arcs via five new data types (see Figure 3): 
-	- CircularString
-	- CompoundCurve
-	- CurvePolygon
-	- MultiCurve
-	- MultiSurface
+2) Temporal data via a timestamp or interval;
+3) 3D capabilities via four new data types:  
+   - Polyhedron (composed of faces; see Figure 2)
+   - MultiPolyhedron
+   - Prism (base geometry with 'height from' and 'height to' as additional attributes; similar to 2.5D)
+   - MultiPrism
+4) Use of arcs via five new data types (see Figure 3):  
+   - CircularString
+   - CompoundCurve
+   - CurvePolygon
+   - MultiCurve
+   - MultiSurface
 5) Linear referencing using measures (e.g., indicating a location along a linear feature like a highway using hectometer markers).
 6) Specification of the feature type and its associated schema. This enables the automatic assignment of a map layer in a viewer based on the feature type. It also allows multiple featuretypes to be included in a single file.
 
@@ -80,11 +80,11 @@ Geografy Markup Language is also based on [iso-19136-2007].
 
 The most recent and officialy published GML-specification is:
 
-GML 3.3 (Extended Schemas and Encoding Rules): https://docs.ogc.org/is/10-129r1/10-129r1/pdf
+GML 3.3 [Extended Schemas and Encoding Rules](https://docs.ogc.org/is/10-129r1/10-129r1/pdf)
 
 Most Dutch geo-standards (like the NEN 3610-profiles) are still based on GML 3.2.2:
 
-GML 3.2.2 Encoding Standard: https://docs.ogc.org/is/07-036r1/07-036r1/pdf
+GML 3.2.2 [Encoding Standard](https://docs.ogc.org/is/07-036r1/07-036r1/pdf)
 
 When supporting GML, do this according to OGC API Features [Requirements class 8.4](https://docs.ogc.org/is/17-069r3/17-069r3.html#_requirements_class_geography_markup_language_gml_simple_features_profile_level_0) for GML Simple Features level 0, or [Requirements class 8.4](https://docs.ogc.org/is/17-069r3/17-069r3.html#_requirements_class_geography_markup_language_gml_simple_features_profile_level_2) for GML Simple Features level 2.
 
