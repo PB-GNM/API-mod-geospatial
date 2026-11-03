@@ -199,26 +199,14 @@ However, until the filtering module is written, the geospatial module retains ru
   "currentPage": 1,
   "nextPage": 2,
   "pageSize": 10,
-  "_embedded": {
-    "items": [
-      {
-        "type": "enkelbestemming",
-        "_links": {
-          "self": {
-            "href": "https://api.example.org/v1/enkelbestemmingen/1234"
-          }
-        }
-      },
-      {
-        "type": "dubbelbestemming",
-        "_links": {
-          "self": {
-            "href": "https://api.example.org/v1/dubbelbestemmingen/8765"
-          }
-        }
-      }
-    ]
-  }
+  "items": [
+    {
+      "type": "enkelbestemming"
+    },
+    {
+      "type": "dubbelbestemming"
+    }
+  ]
 }
         </code></pre>
       </aside>
