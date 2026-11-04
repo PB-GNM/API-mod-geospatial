@@ -45,6 +45,30 @@ The GeoJSON conventions and extensions described in this module apply to both ge
 
 GeoJSON does not cover all use cases. For example, it is not possible to store circular arc geometries or solids in GeoJSON. In such cases, there are several valid options:
 
+<aside class="example">
+Pointfeature in GeoJSON encoding
+<pre><code class="json">
+// Content-type: application/fg+json
+{
+  "type": "FeatureCollection",
+  "features": [
+	{
+	  "type": "Feature",
+	  "id": "0308100000022041",
+	  "geometry":  {
+		"type": "Point",
+		"coordinates": [5.2795,52.1933]
+	  },
+	  "properties": {
+		"naam": "Paleis Soestdijk",
+	  }
+	}
+  ]
+}
+
+</code></pre>
+</aside>
+
 - Use alternative standardized formats for geospatial data, such as:  
   - [OGC JSON-FG](https://docs.ogc.org/is/21-045r1/21-045r1.html) as preferred alternative
   - [GML](https://docs.ogc.org/is/07-036r1/07-036r1/pdf)
@@ -74,6 +98,43 @@ JSON-FG offers the following additional capabilities beyond those of GeoJSON:
 
 If one or more of these capabilities are applicable, JSON-FG is a recommended encoding.
 
+<aside class="example">
+Same pointfeature as in previous example but in JSON-FG encoding
+<pre><code class="json">
+// Content-type: application/fg+json
+{
+  "type": "FeatureCollection",
+  "timeStamp": "2026-06-25T13:03:30Z",
+  "coordRefSys": "http://www.opengis.net/def/crs/EPSG/0/7415",
+  "conformsTo": [
+    "http://www.opengis.net/spec/json-fg-1/1.0/conf/core",
+    "http://www.opengis.net/spec/json-fg-1/1.0/conf/types-schemas"
+  ],
+  "features": [
+	{
+	  "type": "Feature",
+	  "id": "0308100000022041",
+	  "featureType": "Gebouw", 
+	  "time": null,
+	  "place": {
+		"type": "Point",
+		"coordinates": [147832, 463187, 5] // 3D point in RD-NAP
+	  },
+	  "geometry":  {
+		"type": "Point",
+		"coordinates": [5.2795,52.1933] // 2D point in WGS84
+	  },
+	  "properties": {
+		"naam": "Paleis Soestdijk",
+	  }
+	}
+  ]
+}
+
+</code></pre>
+</aside>
+
+
 If the time element is used, it is not clear which time type it concerns. Therefore it is recommended to use an extra element in the endpoint of the collections to indicate the used time type.  
 
   <pre class="example">
@@ -94,7 +155,7 @@ Most Dutch geo-standards (like the NEN 3610-profiles) are still based on GML 3.2
 
 GML 3.2.2 [Encoding Standard](https://docs.ogc.org/is/07-036r1/07-036r1/pdf)
 
-When supporting GML, do this according to OGC API Features [Requirements class 8.4](https://docs.ogc.org/is/17-069r3/17-069r3.html#_requirements_class_geography_markup_language_gml_simple_features_profile_level_0) for GML Simple Features level 0, or [Requirements class 8.4](https://docs.ogc.org/is/17-069r3/17-069r3.html#_requirements_class_geography_markup_language_gml_simple_features_profile_level_2) for GML Simple Features level 2.
+When supporting GML, do this according to OGC API Features [Requirements class 8.4](https://docs.ogc.org/is/17-069r4/17-069r4.html#_requirements_class_geography_markup_language_gml_simple_features_profile_level_0) for GML Simple Features level 0, or [Requirements class 8.4](https://docs.ogc.org/is/17-069r4/17-069r4.html#_requirements_class_geography_markup_language_gml_simple_features_profile_level_2) for GML Simple Features level 2.
 
 ### WKT/WKB
 
@@ -233,7 +294,7 @@ In case a REST API shall comply to the OGC API Features specification for creati
       <aside class="example">
         POST feature
         <pre><code class="json">
-// POST /collections/gebouwen/items   HTTP/1.1
+// POST /collections/gebouw/items   HTTP/1.1
 // Content-Type: application/geo+json
 {
   "type": "Feature",
@@ -295,7 +356,7 @@ In case a collection of resources is embedded in the request resource, the name 
       <aside class="example">
         POST resource containing geometry
         <pre><code class="json">
-// POST /collections/gebouwen/items   HTTP/1.1
+// POST /collections/gebouw/items   HTTP/1.1
 // Content-Type: application/json
 {
   "naam": "Paleis Soestdijk",
@@ -309,7 +370,7 @@ In case a collection of resources is embedded in the request resource, the name 
       <aside class="example">
         POST resource containing geometry collection
         <pre><code class="json">
-// POST /collections/gebouwen/items   HTTP/1.1
+// POST /collections/gebouw/items   HTTP/1.1
 // Content-Type: application/json
 {
   "naam": "Paleis Soestdijk",
@@ -350,7 +411,7 @@ In case a REST API shall comply to the OGC API Features specification, e.g. for 
       <aside class="example">
         Feature
         <pre><code class="json">
-// GET /collections/gebouwen/items/0308100000022041   HTTP 1.1
+// GET /collections/gebouw/items/0308100000022041   HTTP 1.1
 // Content-type: application/geo+json
 {
   "type": "Feature",
@@ -365,7 +426,7 @@ In case a REST API shall comply to the OGC API Features specification, e.g. for 
   },
   "links": [
     {
-      "self": "/collections/gebouwen/items/0308100000022041"
+      "self": "/collections/gebouw/items/0308100000022041"
     }
   ]
 }
@@ -374,7 +435,7 @@ In case a REST API shall comply to the OGC API Features specification, e.g. for 
       <aside class="example">
         Feature collection
         <pre><code class="json">
-// GET /collections/gebouwen   HTTP 1.1
+// GET /collections/gebouw   HTTP 1.1
 // Content-type: application/geo+json
 {
   "type": "FeatureCollection",
@@ -392,7 +453,7 @@ In case a REST API shall comply to the OGC API Features specification, e.g. for 
       },
       "links": [
         {
-          "self": "/collections/gebouwen/0308100000022041"
+          "self": "/collections/gebouw/0308100000022041"
         }
       ]
     },
@@ -404,7 +465,7 @@ In case a REST API shall comply to the OGC API Features specification, e.g. for 
   "numberReturned" : "1",
   "links": [
     {
-      "self": "/collections/gebouwen"
+      "self": "/collections/gebouw"
     },
     {
       "next": ""
