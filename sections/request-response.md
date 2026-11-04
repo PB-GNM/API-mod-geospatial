@@ -48,7 +48,7 @@ GeoJSON does not cover all use cases. For example, it is not possible to store c
 <aside class="example">
 Pointfeature in GeoJSON encoding
 <pre><code class="json">
-// Content-type: application/fg+json
+// Content-type: application/geo+json
 {
   "type": "FeatureCollection",
   "features": [
