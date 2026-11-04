@@ -78,12 +78,6 @@ loadRespecWithConfiguration({
       publisher: "Open Geospatial Consortium",
       version: "1.0"
     },
-    "HAL": {
-      href: "http://stateless.co/hal_specification.html",
-      title: "HAL - Hypertext Application Language",
-      authors: ["Mike Kelly"],
-      date: " 2013-09-18",
-    },
   },
   postProcess: [processRuleBlocks],
 });

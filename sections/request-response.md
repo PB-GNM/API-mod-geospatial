@@ -467,18 +467,12 @@ In case a collection of resources is returned, the name of the array containing 
         Resource containing geometry
         <pre><code class="json">
 // GET /gebouwen/0308100000022041   HTTP 1.1
-// Content-type: application/hal+json
 {
   "identificatie": "0308100000022041",
   "naam": "Paleis Soestdijk",
   "geometrie":  {
     "type": "Point",
     "coordinates": [5.2795,52.1933]
-  },
-  "_links": {
-    {
-      "self": "/gebouwen/0308100000022041"
-    }
   }
 }
         </code></pre>
@@ -487,7 +481,6 @@ In case a collection of resources is returned, the name of the array containing 
         Resource containing geometry collection
         <pre><code class="json">
 // GET /gebouwen/0308100000022041   HTTP 1.1
-// Content-type: application/hal+json
 {
   "identificatie": "0308100000022041",
   "naam": "Paleis Soestdijk",
@@ -503,11 +496,6 @@ In case a collection of resources is returned, the name of the array containing 
         "coordinates" : [/* ... */]
       }
     ]
-  },
-  "_links": {
-    {
-      "self": "/gebouwen/0308100000022041"
-    }
   }
 }
         </code></pre>
@@ -516,7 +504,6 @@ In case a collection of resources is returned, the name of the array containing 
         Collection of resources containing geometry
         <pre><code class="json">
 // GET /gebouwen   HTTP 1.1
-// Content-type: application/hal+json
 {
   "gebouwen": [
     {
@@ -526,25 +513,11 @@ In case a collection of resources is returned, the name of the array containing 
         "type": "Point",
         "coordinates": [5.2795,52.1933]
       }
-      "_links": {
-        {
-          "self": "/gebouwen/0308100000022041"
-        }
-      }
     }
-  ],
-  "_links": {
-    {
-      "self": "/gebouwen"
-    },
-    {
-      "next": ""
-    }
-  }
+  ]
 }
         </code></pre>
       </aside>
-      <p class="note">The resource and resource collection may be [[HAL]] resources and therefore may contain a `_links` object. The `_links` object should contain a self link and in case of a collection also navigation links (e.g. first, next prev, last). In such cases the <code>application/hal+json</code> media type may be used.
     </dd>
     <dt>How to test</dt>
     <dd>
