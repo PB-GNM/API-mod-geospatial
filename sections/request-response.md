@@ -161,17 +161,21 @@ When supporting GML, do this according to OGC API Features [Requirements class 8
 Same point feature as in previous example but now in GML
 <pre><code class="xml">
 // Content-type: application/gml+xml; version=3.2
+
 <?xml version="1.0" encoding="UTF-8"?>
+
 <gml:FeatureCollection
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:app="http://example.org/gebouw"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     gml:id="fc-1">
+
     <gml:metaDataProperty>
         <app:CollectionMetadata>
             <app:timeStamp>2026-06-25T13:03:30Z</app:timeStamp>
         </app:CollectionMetadata>
     </gml:metaDataProperty>
+
     <gml:featureMember>
         <app:Gebouw gml:id="0308100000022041">
 
