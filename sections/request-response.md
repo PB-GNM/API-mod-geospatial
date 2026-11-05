@@ -58,7 +58,7 @@ Point feature example in GeoJSON encoding
 		"coordinates": [5.2795,52.1933]
 	  },
 	  "properties": {
-		"naam": "Paleis Soestdijk",
+		"naam": "Paleis Soestdijk"
 	  }
 	}
   ]
