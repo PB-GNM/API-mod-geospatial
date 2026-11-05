@@ -125,7 +125,7 @@ Same point feature as in previous example but now in JSON-FG encoding with extra
 		"coordinates": [5.2795, 52.1933]
 	  },
 	  "properties": {
-		"naam": "Paleis Soestdijk",
+		"naam": "Paleis Soestdijk"
 	  }
 	}
   ]
@@ -196,6 +196,7 @@ Same point feature as in previous example but now in GML
                     <gml:pos>5.2795 52.1933</gml:pos>
                 </gml:Point>
             </app:geometry2>
+			
             <app:naam>Paleis Soestdijk</app:naam>
 
         </app:Gebouw>
