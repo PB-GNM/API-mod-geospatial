@@ -43,10 +43,8 @@ The supported encodings should also be mentioned in the corresponding conformanc
 [[RFC7946]] describes the GeoJSON format, including a convention for describing 2D geometric objects in CRS84 (OGC:CRS84). In the Geospatial module of the API strategy we adopt the GeoJSON conventions for describing geometry objects. The convention is extended to allow alternative projections.
 The GeoJSON conventions and extensions described in this module apply to both geometry passed in input parameters and responses.
 
-GeoJSON does not cover all use cases. For example, it is not possible to store circular arc geometries or solids in GeoJSON. In such cases, there are several valid options:
-
 <aside class="example">
-Pointfeature in GeoJSON encoding
+Point feature example in GeoJSON encoding
 <pre><code class="json">
 // Content-type: application/geo+json
 {
@@ -68,6 +66,8 @@ Pointfeature in GeoJSON encoding
 
 </code></pre>
 </aside>
+
+GeoJSON does not cover all use cases. For example, it is not possible to store circular arc geometries or solids in GeoJSON. In such cases, there are several valid options:
 
 - Use alternative standardized formats for geospatial data, such as:  
   - [OGC JSON-FG](https://docs.ogc.org/is/21-045r1/21-045r1.html) as preferred alternative
@@ -99,7 +99,7 @@ JSON-FG offers the following additional capabilities beyond those of GeoJSON:
 If one or more of these capabilities are applicable, JSON-FG is a recommended encoding.
 
 <aside class="example">
-Same pointfeature as in previous example but in JSON-FG encoding
+Same point feature as in previous example but now in JSON-FG encoding with extra elements
 <pre><code class="json">
 // Content-type: application/fg+json
 {
